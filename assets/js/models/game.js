@@ -6,6 +6,7 @@ function Game (canvasElement) {
   this.intervalId = undefined;
 
   this.bg = new Background(this.ctx);
+  this.courier = new Courier(this.ctx)
 
 }
 
@@ -19,10 +20,11 @@ Game.prototype.start = function () {
 
 Game.prototype.drawAll = function () {
   this.bg.draw();
+  this.courier.draw();
 }
 
 Game.prototype.moveAll = function () {
-
+  this.bg.move();
 }
 
 Game.prototype.clearAll = function () {
